@@ -42,6 +42,7 @@ header {
   top: 40px;
   right: 15px;
   text-align: center;
+  z-index: 5;
 }
 .nav > ul {
   display: flex;
@@ -143,7 +144,6 @@ header {
 }
 .notice {
   background-color: blue;
-  display: none;
 }
 .notice ul li {
   display: flex;
@@ -157,6 +157,7 @@ header {
 }
 .gall {
   background-color: black;
+  display: none;
 }
 .gall ul {
   height: 100%;
