@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: #333;
+}
+img {
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+body {
+  background-color: #fff;
+  color: #333;
+}
+.wrap {
+  position: relative;
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 100px 500px 100px;
+  background-color: aliceblue;
+}
+header {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+/* nav position */
+.nav {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  text-align: center;
+}
+.nav > ul {
+  display: flex;
+}
+.nav > ul > li > a {
+  display: block;
+  width: 120px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  padding: 5px;
+  color: #333;
+}
+.nav > ul > li:hover > a {
+  color: whitesmoke;
+  background-color: blue;
+}
+.submenu li a {
+  background-color: #fff;
+  display: block;
+  padding: 3px;
+  display: none;
+}
+.submenu li a:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* slide */
+.slide {
+  position: relative;
+  height: 300px;
+  background-color: #333;
+  overflow: hidden;
+}
+.slide ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 900px;
+}
+.slide ul li {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+}
+.slide ul li a {
+  display: block;
+  height: 100%;
+}
+/* url을 통해 값 넣어주기 */
+/* url(주소)  no-repeat center/cover */
+.slide .s1 {
+  background: url(/img/A-1_수험자제공파일/Slide/img1.jpg) no-repeat center/cover;
+}
+.slide .s2 {
+  background: url(/img/A-1_수험자제공파일/Slide/img2.jpg) no-repeat center/cover;
+}
+.slide .s3 {
+  background: url(/img/A-1_수험자제공파일/Slide/img3.jpg) no-repeat center/cover;
+}
+.slide ul li p {
+  background-color: whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.con {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 200px;
+}
+.con1 .tabmenu {
+  display: flex;
+  text-align: center;
+}
+.con .tabmenu li {
+  width: 150px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.con1 .tabmenu li a {
+  display: block;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.con1 .tabmenu .on a {
+  background-color: blue;
+  color: white;
+}
+.tabcon {
+  padding: 10px;
+  height: 150px;
+}
+.notice {
+  background-color: blue;
+  display: none;
+}
+.notice ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px dashed white;
+}
+.notice ul li a,
+.notice ul li span {
+  color: white;
+}
+.gall {
+  background-color: black;
+}
+.gall ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.con2 a {
+  display: block;
+  height: 100%;
+  background: url(/img/A-1_수험자제공파일/Contents/배너이미지/banner.jpg)
+    center/cover;
+}
+.con3 a {
+  display: block;
+  background: url(/img/A-1_수험자제공파일/Contents/바로가기이미지/direct.jpg)
+    center/cover;
+  height: 100%;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1.2fr;
+  padding: 10px;
+}
+.flogo {
+  display: flex;
+  align-items: end;
+}
+.copylight {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.sns {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+}
+.sns a {
+  display: block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.sns a img {
+  border-radius: 15px;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  background-color: whitesmoke;
+  z-index: 9999;
+  display: none;
+}
+.popup h2 {
+  margin-bottom: 15px;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+.popup p {
+  margin: 30px;
+}
+.popup .btn {
+  padding: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
