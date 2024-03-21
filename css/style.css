@@ -1,236 +1,203 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   text-decoration: none;
+  list-style: none;
+  padding: 0;
 }
 a {
-  color: #333;
+  display: block;
 }
-img {
-  max-width: 100%;
-}
-button {
-  cursor: pointer;
-}
-body {
-  background-color: #fff;
-  color: #333;
+p {
+  padding: 0;
+  margin: 0;
 }
 .wrap {
-  position: relative;
-}
-.inner {
+  display: grid;
+  grid-template-rows: 100px 300px 200px 100px;
   width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-rows: 100px 500px 100px;
-  background-color: aliceblue;
+  position: relative;
 }
 header {
-  background: black;
+  background-color: #739cbf;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 0 20px;
   position: relative;
 }
-/* nav position */
+header .logo img {
+  height: 40px;
+  width: 200px;
+}
 .nav {
   position: absolute;
-  top: 40px;
-  right: 15px;
-  text-align: center;
-  z-index: 5;
+  right: 0;
+  top: 20px;
 }
 .nav > ul {
   display: flex;
-}
-.nav > ul > li > a {
-  display: block;
-  width: 120px;
   background-color: whitesmoke;
-  font-weight: bold;
-  padding: 5px;
-  color: #333;
 }
-.nav > ul > li:hover > a {
-  color: whitesmoke;
-  background-color: blue;
+.menu > a {
+  width: 150px;
+  background-color: #f2d1b3;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
 }
 .submenu li a {
-  background-color: #fff;
-  display: block;
-  padding: 3px;
+  text-align: center;
+  color: black;
+  padding: 5px 0;
+}
+.submenu > li > a:hover {
+  background-color: black;
+  color: white;
+}
+.menu:hover > a {
+  background-color: #a63f3f;
+  color: white;
+}
+.submenu {
   display: none;
 }
-.submenu li a:hover {
-  background-color: black;
-  color: whitesmoke;
-}
-
+/* menu display none */
 /* slide */
 .slide {
   position: relative;
   height: 300px;
-  background-color: #333;
-  overflow: hidden;
 }
-.slide ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 900px;
-}
-.slide ul li {
-  width: 1200px;
-  height: 300px;
+.slide a {
+  display: block;
   position: relative;
 }
-.slide ul li a {
-  display: block;
-  height: 100%;
-}
-/* url을 통해 값 넣어주기 */
-/* url(주소)  no-repeat center/cover */
-.slide .s1 {
-  background: url(/img/A-1_수험자제공파일/Slide/img1.jpg) no-repeat center/cover;
-}
-.slide .s2 {
-  background: url(/img/A-1_수험자제공파일/Slide/img2.jpg) no-repeat center/cover;
-}
-.slide .s3 {
-  background: url(/img/A-1_수험자제공파일/Slide/img3.jpg) no-repeat center/cover;
-}
-.slide ul li p {
-  background-color: whitesmoke;
+.slide a > p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 50px;
-  font-size: 28px;
+  background-color: rgba(240, 248, 255, 0.555);
   font-weight: bold;
+  font-size: 30px;
+  color: black;
+  padding: 15px 50px;
+  border-radius: 50px;
 }
-.con {
+.slides {
+  overflow: hidden;
+}
+.contents {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 200px;
 }
-.con1 .tabmenu {
+.con1 {
+  background-color: whitesmoke;
+}
+.con1 .tabcon {
   display: flex;
-  text-align: center;
+  margin: 0;
 }
-.con .tabmenu li {
-  width: 150px;
-  margin-right: 5px;
-  margin-top: 3px;
-}
-.con1 .tabmenu li a {
+.tab {
   display: block;
-  padding: 10px;
-  background-color: black;
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-right: 2px;
+  background-color: #739cbf54;
   color: white;
 }
-.con1 .tabmenu .on a {
-  background-color: blue;
-  color: white;
+.tabcon a {
+  color: black;
 }
-.tabcon {
-  padding: 10px;
-  height: 150px;
+.on {
+  background-color: #f2d1b3;
+  font-weight: bold;
 }
-.notice {
-  background-color: blue;
+.notice-con {
+  background-color: #f2d1b3;
 }
-.notice ul li {
+.notice-con > ul > li > a {
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px dashed white;
+  align-items: center;
+  padding: 7.5px 5px;
+  border-bottom: 1px dotted black;
+  color: black;
 }
-.notice ul li a,
-.notice ul li span {
+.notice-con > ul {
+  margin: 0;
+}
+.con1 .tabcon .gall > a {
   color: white;
+  background-color: #739cbf8c;
 }
-.gall {
-  background-color: black;
-  display: none;
-}
-.gall ul {
-  height: 100%;
+.gall-con {
+  background-color: #739cbf54;
+  height: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.con2 a {
-  display: block;
-  height: 100%;
-  background: url(/img/A-1_수험자제공파일/Contents/배너이미지/banner.jpg)
-    center/cover;
-}
-.con3 a {
-  display: block;
-  background: url(/img/A-1_수험자제공파일/Contents/바로가기이미지/direct.jpg)
-    center/cover;
-  height: 100%;
+  padding: 0 30px;
+  display: none;
 }
 footer {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1.2fr;
-  padding: 10px;
+  display: flex;
+  background-color: #739cbf;
+  padding: 0 20px;
+}
+footer img {
+  width: 200px;
+  height: 40px;
 }
 .flogo {
-  display: flex;
-  align-items: end;
+  width: 250px;
+  align-self: center;
 }
-.copylight {
+.fcon {
   display: flex;
-  align-items: end;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
-.sns {
+.fmenu > ul {
   display: flex;
-  align-items: end;
-  justify-content: right;
+  justify-content: space-evenly;
 }
-.sns a {
+.fmenu > ul > li > a {
+  color: white;
+}
+.copyright {
   display: block;
-  margin-right: 10px;
-  font-weight: bold;
+  text-align: right;
+  margin-top: 13px;
 }
-.sns a img {
-  border-radius: 15px;
-}
-
 .popup {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  width: 400px;
-  text-align: center;
-  background-color: whitesmoke;
-  z-index: 9999;
+  background-color: white;
+  width: 550px;
+  padding: 40px;
+  border-radius: 10px;
   display: none;
 }
 .popup h2 {
+  margin-top: 0;
   margin-bottom: 15px;
-  background-color: rgb(17, 17, 17);
-  color: white;
-  border-radius: 10px;
-  padding: 5px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
 }
-.popup p {
-  margin: 30px;
-}
-.popup .btn {
-  padding: 5px;
+.popup button {
   background-color: black;
   color: white;
-  cursor: pointer;
   border-radius: 10px;
+  padding: 6px 10px;
+  margin-top: 20px;
+  float: right;
 }
